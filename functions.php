@@ -95,6 +95,10 @@ function sound_scripts() {
 	wp_enqueue_style( 'sound-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'sound-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
+	
+	wp_enqueue_script( 'sound-stellar', get_template_directory_uri() . '/js/jquery.stellar.js', array( 'jquery' ), '0.6.2', false );
+
+	wp_enqueue_script( 'sound-variousjs', get_template_directory_uri() . '/js/various.js', array( 'jquery', 'sound-stellar' ), '1.0.0', false );
 
 	wp_enqueue_script( 'sound-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 

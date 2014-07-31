@@ -94,6 +94,7 @@ add_action( 'widgets_init', 'sound_widgets_init' );
  */
 function sound_scripts() {
 	wp_enqueue_style( 'sound-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'sound-style2', get_template_directory_uri() . '/css/sound.css' );
 
 	wp_enqueue_script( 'sound-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 	

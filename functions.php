@@ -30,16 +30,17 @@ function sound_setup() {
 	 */
 	load_theme_textdomain( 'sound', get_template_directory() . '/languages' );
 
+
 	// Add default posts and comments RSS feed links to head.
-	add_theme_support( 'automatic-feed-links' );
+	//	add_theme_support( 'automatic-feed-links' );
 
 	/*
 	 * Enable support for Post Thumbnails on posts and pages.
 	 *
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	 */
-	//add_theme_support( 'post-thumbnails' );
-
+	add_theme_support( 'post-thumbnails', array( 'sound_stories' ) ); 
+	 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'sound' ),
@@ -57,15 +58,15 @@ function sound_setup() {
 	 * Enable support for Post Formats.
 	 * See http://codex.wordpress.org/Post_Formats
 	 */
-	add_theme_support( 'post-formats', array(
+	/*add_theme_support( 'post-formats', array(
 		'aside', 'image', 'video', 'quote', 'link'
-	) );
+	) );*/
 
 	// Setup the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'sound_custom_background_args', array(
+	/**add_theme_support( 'custom-background', apply_filters( 'sound_custom_background_args', array(
 		'default-color' => 'ffffff',
 		'default-image' => '',
-	) ) );
+	) ) );**/
 }
 endif; // sound_setup
 add_action( 'after_setup_theme', 'sound_setup' );
@@ -93,6 +94,7 @@ add_action( 'widgets_init', 'sound_widgets_init' );
  */
 function sound_scripts() {
 	wp_enqueue_style( 'sound-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'sound-style2', get_template_directory_uri() . '/css/sound.css' );
 
 	wp_enqueue_script( 'sound-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 	

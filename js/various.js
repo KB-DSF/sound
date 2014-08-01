@@ -1,6 +1,6 @@
 $(function(){
 		$.stellar({
 			horizontalScrolling: false,
-			verticalOffset: 40
+			verticalOffset: 0
 		});
 	});

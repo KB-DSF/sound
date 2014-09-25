@@ -6,32 +6,80 @@
 .tester{
 	position: relative;
 	background: aqua;
-	height: 300px;
+	height: 500px;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: 50% 0;
-	border-bottom: 5px dashed black;
+	border-bottom: 5px solid white;
 		}
 
 #test1{
-	background-image: url(http://localhost:8888/wp-content/uploads/2014/07/howe-sound-hamish-baxter-via-flickr.jpg);
+	background-image:url(http://localhost:8888/wp-content/uploads/2014/09/howesound.jpg);
+	background-position-y: -240px;
+	background-size: cover;
 	}
 
 #test2{
 	background-image: url(http://localhost:8888/wp-content/uploads/2014/07/Adriana-McM-via-Flickr.jpg);
+	background-position-y: -340px;
+	background-size: cover;
+
 	}
 
 #test3{
 	background-image: url(http://localhost:8888/wp-content/uploads/2014/07/eelgrass-eric-heupel-via-flickr.jpg);
+		background-size: cover;
+
 	}
 
-.tester span{
-			bottom: 0;
+.tester .tester-title{
+			bottom: 100px;
 			color: white;
 			display: block;
-			left: 50%;
-			font-size: 38px;
 			padding: 10px;
 			position: absolute;
+			left: 20px;
+			font-size: 40px;
+			text-transform: uppercase;
+			font-family: 'Roboto Slab', Arial, Helvetica, sans-serif;
+			/*font-family: 'Slabo 27px', serif;*/
+			text-shadow: 1px 2px 4px #000000;
+}
+.entry-title{
+	font-family: 'Source Sans Pro', Arial, sans-serif;
+	font-size: 30px;
+	color:#7e7e7e;
+	margin-left: 30px;
+}
 
+.entry-content{
+	font-family: 'Source Sans Pro', Arial, sans-serif;
+	font-size: 20px;
+	width: 70%;
+		margin-left: 30px;
+
+}
+
+.break{
+	height: 50px;
+	margin-left:10%;
+	font-family: 'Roboto Slab', Arial, Helvetica, sans-serif;
+	font-size: 30px;
+	color:#000000;
+	text-align: center;
+}
+
+.tester-deck{
+		font-family: 'Source Sans Pro', Arial, sans-serif;
+		font-size: 20px;
+		width: 40%;
+		margin-left: 2%;
+		margin-top: 350px;
+		color: white;
+		display: block;
+			text-shadow: 1px 2px 4px #000000;
+
+}
+a:active, a:hover, a:visited{
+	color:black;
 }
